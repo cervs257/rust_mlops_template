@@ -15,13 +15,10 @@
 		"ghcr.io/eitsupi/devcontainer-features/mdbook:0": {},
 		"ghcr.io/guiyomh/features/vim:0": {}
 	},
-	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5432],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "rustc --version",
 	"customizations": {
@@ -31,14 +28,13 @@
 				"GitHub.copilot-nightly",
 				"ms-azuretools.vscode-docker",
 				"technosophos.vscode-make",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"rust-lang.rust-analyzer"
 			]
 		}
 	},
-
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
