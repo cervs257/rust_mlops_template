@@ -26,9 +26,9 @@ fn main() {
         .expect("Failed to read line");
 
     // use of match expression to pattern match agains variable greeting
-    match greeting.trim() {
-        "Hello" => println!("Hello Indeed!"),
-        "Goodbye" => println!("Goodbye World!"),
+    match greeting.to_lowercase().trim() {
+        "hello" => println!("Hello Indeed!"),
+        "goodbye" => println!("Goodbye World!"),
         // the following is used to catch anything else
         _ => println!("I don't know what you mean!"),
     }
