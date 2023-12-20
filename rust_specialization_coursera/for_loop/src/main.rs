@@ -11,6 +11,14 @@ fn main() {
         println!("for loop with range: {}", i);
     }
 
+    // same for loop but implementing continue
+    for i in 0..=5 {
+        if i == 3 {
+            continue; // this continue is equivalent to pass in Python .. in this example, it won't print 3
+        }
+        println!("for loop with range: {}", i);
+    }
+
     // iterating over arrays and vectors:
     // there's a difference between referencing the array/vector and moving it into the for loop
     // referencing it allows you to use the array/vector after the loop
