@@ -39,7 +39,6 @@ fn car_factory(order: i32, miles: u32) -> Car {
 
     // Prevent panic: Check color index for colors array, reset as needed
     // Valid color = 1, 2, 3, or 4
-    // If color > 4, reduce color to valid index
     let color = (order % 4) as usize;
 
     // Add variety to orders for motor type and roof type
