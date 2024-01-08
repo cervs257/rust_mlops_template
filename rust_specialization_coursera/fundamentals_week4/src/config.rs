@@ -25,15 +25,22 @@ pub enum LogOutput {
 /// let config = Logging::new();
 /// ```
 ///
-/// Creating a new instance of the Logging struct:
+///
+/// Create a new instance of the Logging struct using custom values:
 /// ```
 /// use fundamentals_week4::config::{Logging, LogLevel, LogOutput};
-/// let config = Logging{ enabled: true, level: LogLevel::Info, destination: LogOutput::Stdout };
+/// let config = Logging {
+///     enabled: true,
+///     level: LogLevel::Debug,
+///     destination: LogOutput::File("log.txt".to_string())
+/// };
 /// ```
+///
+
 pub struct Logging {
     pub enabled: bool,
     pub level: LogLevel,
-    pub destination: LogOutput,
+    pub destination: LogOutput, // i might not want to expose this field -> make it private
 }
 
 impl Logging {
