@@ -43,7 +43,7 @@ mod tests {
     fn test_read_input() {
         let input = "Hello, world!\n";
         let expected_output = "Hello, world!";
-        let mut reader = Cursor::new(input);
+        let mut reader = Cursor::new(input); // Cursor is used to simulate stdin instead of using stdin directly
         let output = _read_stdin(&mut reader);
         assert_eq!(output, expected_output);
     }
