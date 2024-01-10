@@ -55,6 +55,14 @@ impl ColorString {
         };
     }
 
+    pub fn new(color: Color, string: String) -> Self {
+        Self {
+            color,
+            string,
+            colorized: "".to_string(),
+        }
+    }
+
     pub fn reset(&mut self) {
         self.colorized = reset(&self.string);
     }
