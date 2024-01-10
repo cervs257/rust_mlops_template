@@ -53,6 +53,16 @@ mod tests {
     }
 
     #[test]
+    #[should_panic]
+    fn test_read_input_panic() {
+        let input = "lets panic\n";
+        let expected_output = "dont panic";
+        let mut reader = Cursor::new(input);
+        let output = _read_stdin(&mut reader);
+        assert_eq!(output, expected_output);
+    }
+
+    #[test]
     fn test_read_input_empty() {
         let input = "";
         let expected_output = "";
