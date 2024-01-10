@@ -45,7 +45,11 @@ mod tests {
         let expected_output = "Hello, world!";
         let mut reader = Cursor::new(input); // Cursor is used to simulate stdin instead of using stdin directly
         let output = _read_stdin(&mut reader);
-        assert_eq!(output, expected_output);
+        assert_eq!(
+            output, expected_output,
+            "Expected output to be {}",
+            expected_output
+        );
     }
 
     #[test]
