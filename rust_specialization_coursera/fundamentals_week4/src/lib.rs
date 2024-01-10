@@ -34,6 +34,7 @@ fn _read_stdin<R: BufRead>(reader: &mut R) -> String {
     line.trim().to_string()
 }
 
+// common practice is to add unit tests as follows:
 #[cfg(test)] // adding cfg(test) to the module will only compile the module when running tests
 mod tests {
     use super::_read_stdin;
@@ -57,6 +58,17 @@ mod tests {
     fn test_read_input_panic() {
         let input = "lets panic\n";
         let expected_output = "dont panic";
+        let mut reader = Cursor::new(input);
+        let output = _read_stdin(&mut reader);
+        assert_eq!(output, expected_output);
+    }
+
+    // the following test will be ignored ... serves as a placeholder for certain test of code that hasn't been built
+    #[test]
+    #[ignore = "not yet implemented"]
+    fn test_read_input_ignore() {
+        let input = "ignore this\n";
+        let expected_output = "ignore this";
         let mut reader = Cursor::new(input);
         let output = _read_stdin(&mut reader);
         assert_eq!(output, expected_output);
