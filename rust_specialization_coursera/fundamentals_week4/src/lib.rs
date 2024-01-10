@@ -34,7 +34,7 @@ fn _read_stdin<R: BufRead>(reader: &mut R) -> String {
     line.trim().to_string()
 }
 
-#[cfg(test)]
+#[cfg(test)] // adding cfg(test) to the module will only compile the module when running tests
 mod tests {
     use super::_read_stdin;
     use std::io::Cursor;
